@@ -12,7 +12,7 @@ async function run(): Promise<void> {
 
     let toolPath: string | undefined;
 
-    const version = versionRegex.exec(url)?.groups?.[1];
+    const version = versionRegex.exec(url)?.[1];
     if (version) {
       core.info(`Trying to find ${version} in cache`);
 
